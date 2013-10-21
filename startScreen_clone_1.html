@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            startScreen_clone_1
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.3.0/jquery.mobile.structure-1.3.0.css"
+        rel="stylesheet" />
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-1.8.2.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+                if (navigator.userAgent.toLowerCase().indexOf("msie") != -1)
+                {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.3.0/jquery.mobile-1.3.0.js">
+        </script>
+        <script type="text/javascript" src="files/resources/js/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/cordova.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/childbrowser.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="startScreen_clone_1" id="startScreen_clone_1"
+        class="type-interior" data-theme="b" data-add-back-btn="false" data-back-btn-text="Back">
+            <!-- mobileheader1 -->
+            <div data-role="header" data-position="fixed" data-theme="a" name="mobileheader1"
+            id="startScreen_clone_1_mobileheader1" class=' startScreen_clone_1_mobileheader1 '>
+                <h1 dsid="mobileheader1">
+                    Bondi Alarm
+                </h1>
+            </div>
+            <!-- mobilecontainer1 -->
+            <div data-role="content" id="startScreen_clone_1_mobilecontainer1" name="mobilecontainer1"
+            class=" startScreen_clone_1_mobilecontainer1" dsid="mobilecontainer1" data-theme="e">
+                <link href="startScreen_clone_1.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="startScreen_clone_1.js">
+                </script>
+                <!-- mobilelabel_15 -->
+                <div name="mobilelabel_15" id="startScreen_clone_1_mobilelabel_15" dsid="mobilelabel_15"
+                data-role="appery_label" class=' startScreen_clone_1_mobilelabel_15 '>
+                    A donde vas?
+                </div>
+                <!-- mobilesearchbar_14 -->
+                <div data-role="fieldcontain" class="startScreen_clone_1_mobilesearchbar_14 ">
+                    <div id="startScreen_clone_1_mobilesearchbar_14-cover-div">
+                        <img id="startScreen_clone_1_mobilesearchbar_14-cover-img" src="files/resources/image/icon-search-cover.png"
+                        />
+                    </div>
+                    <input type="search" name="mobilesearchbar_14" id="startScreen_clone_1_mobilesearchbar_14"
+                    dsid="mobilesearchbar_14" value="Search" data-theme="e" tabIndex="5" class=' startScreen_clone_1_mobilesearchbar_14 '
+                    />
+                </div>
+                <!-- mobilelabel_16 -->
+                <div name="mobilelabel_16" id="startScreen_clone_1_mobilelabel_16" dsid="mobilelabel_16"
+                data-role="appery_label" class=' startScreen_clone_1_mobilelabel_16 '>
+                    Cuánto antes deseas el aviso?
+                </div>
+                <!-- mobileselectmenu_23 -->
+                <div data-role="fieldcontain" class="startScreen_clone_1_mobileselectmenu_23 ">
+                    <select name="mobileselectmenu_23" id="startScreen_clone_1_mobileselectmenu_23"
+                    dsid="mobileselectmenu_23" data-theme="e" data-inline="false" data-mini="false" data-icon="arrow-d"
+                    data-iconpos="right" data-native-menu="false" tabIndex="9" appery-class="startScreen_clone_1_mobileselectmenu_23">
+                        <option value="200" reRender="mobileselectmenu_23" dsid="mobileselectmenu_23-0"
+                        selected="selected">
+                            200m
+                        </option>
+                        <option value="300" reRender="mobileselectmenu_23" dsid="mobileselectmenu_23-1">
+                            300m
+                        </option>
+                        <option value="400" reRender="mobileselectmenu_23" dsid="mobileselectmenu_23-2">
+                            400m
+                        </option>
+                        <option value="500" reRender="mobileselectmenu_23" dsid="mobileselectmenu_23-3">
+                            500m
+                        </option>
+                    </select>
+                </div>
+                <!-- mobilebutton_25 -->
+                <a data-role="button" name="mobilebutton_25" dsid="mobilebutton_25" class='  startScreen_clone_1_mobilebutton_25'
+                id="startScreen_clone_1_mobilebutton_25" data-corners="true" data-mini="false" data-theme="b"
+                tabIndex="10">
+                Activar
+                </a>
+            </div>
+            <!-- mobilefooter1 -->
+            <div data-role="footer" data-position="fixed" class=" startScreen_clone_1_mobilefooter1"
+            name="mobilefooter1" dsid="mobilefooter1" id="startScreen_clone_1_mobilefooter1"
+            data-theme="a">
+            </div>
+        </div>
+    </body>
+
+</html>

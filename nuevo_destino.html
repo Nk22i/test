@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            nuevo_destino
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/theme/gelato/gelato.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.3.0/jquery.mobile.structure-1.3.0.css"
+        rel="stylesheet" />
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-1.8.2.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+                if (navigator.userAgent.toLowerCase().indexOf("msie") != -1)
+                {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.3.0/jquery.mobile-1.3.0.js">
+        </script>
+        
+		<script type="text/javascript" src="files/resources/js/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/cordova.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/childbrowser.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="nuevo_destino" id="nuevo_destino"
+        class="type-interior" data-theme="b" data-add-back-btn="true" data-back-btn-text="Menú">
+            <!-- mobileheader1 -->
+            <div data-role="header" data-position="fixed" data-theme="a" name="mobileheader1"
+            id="nuevo_destino_mobileheader1" class=' nuevo_destino_mobileheader1 '>
+                <h1 dsid="mobileheader1">
+                    Nuevo Destino
+                </h1>
+            </div>
+            <!-- mobilecontainer1 -->
+            <div data-role="content" id="nuevo_destino_mobilecontainer1" name="mobilecontainer1"
+            class=" nuevo_destino_mobilecontainer1" dsid="mobilecontainer1" data-theme="e">
+                <link href="nuevo_destino.css" rel="stylesheet" type="text/css" />
+                <link href="AutoCompleter.css" rel="stylesheet" type="text/css" />
+				<script src="http://servicios.usig.buenosaires.gob.ar/usig-js/3.0/usig.AutoCompleterFull.min.js" type="text/javascript"></script> 
+				<script src="http://servicios.usig.buenosaires.gob.ar/usig-js/3.0/usig.Direccion.min.js" type="text/javascript">
+				</script> 
+				<script src="http://servicios.usig.buenosaires.gob.ar/usig-js/3.0/usig.Punto.min.js" type="text/javascript"></script>
+				<script src="http://servicios.usig.buenosaires.gob.ar/usig-js/3.0/usig.GeoCoder.min.js" type="text/javascript"></script>
+                <script type="text/javascript" src="nuevo_destino.js">
+                </script>
+                
+        
+                <!-- mobilelabel_15 -->
+                <div name="mobilelabel_15" id="nuevo_destino_mobilelabel_15" dsid="mobilelabel_15"
+                data-role="appery_label" class=' nuevo_destino_mobilelabel_15 '>
+                    ¿A dónde vas?
+                </div>
+                <!-- mobilesearchbar_14 -->
+                <div data-role="fieldcontain" class="nuevo_destino_mobilesearchbar_14 ">
+                    <div id="nuevo_destino_mobilesearchbar_14-cover-div">
+                        <img id="nuevo_destino_mobilesearchbar_14-cover-img" src="files/resources/image/icon-search-cover.png"
+                        />
+                    </div>
+                    <input name="" id="donde" placeholder="" value="" type="text">
+                   <!--- <input type="search" name="donde" id="donde"
+                    dsid="donde" value="" data-theme="e" tabIndex="5" class=' nuevo_destino_mobilesearchbar_14 '
+                    />-->
+                </div>
+                <!-- mobilelabel_16 -->
+                <div name="mobilelabel_16" id="nuevo_destino_mobilelabel_16" dsid="mobilelabel_16"
+                data-role="appery_label" class=' nuevo_destino_mobilelabel_16 '>
+                    ¿A qué distancia deseas el aviso?
+                </div>
+                <!-- mobileselectmenu_23 -->
+                <div data-role="fieldcontain" class="nuevo_destino_mobileselectmenu_23 ">
+                    <select name="mobileselectmenu_23" id="nuevo_destino_mobileselectmenu_23" dsid="mobileselectmenu_23"
+                    data-theme="e" data-inline="false" data-mini="false" data-icon="arrow-d" data-iconpos="right"
+                    data-native-menu="false" tabIndex="9" appery-class="nuevo_destino_mobileselectmenu_23">
+                        <option value="200" reRender="mobileselectmenu_23" dsid="mobileselectmenu_23-0"
+                        selected="selected">
+                            200m
+                        </option>
+                        <option value="300" reRender="mobileselectmenu_23" dsid="mobileselectmenu_23-1">
+                            300m
+                        </option>
+                        <option value="400" reRender="mobileselectmenu_23" dsid="mobileselectmenu_23-2">
+                            400m
+                        </option>
+                        <option value="500" reRender="mobileselectmenu_23" dsid="mobileselectmenu_23-3">
+                            500m
+                        </option>
+                    </select>
+                </div>
+                <!-- spacer_32 -->
+                <div id="nuevo_destino_spacer_32" dsid="spacer_32" class='mobilespacer nuevo_destino_spacer_32'>
+                </div>
+                <div data-role="fieldcontain" class=" nuevo_destino_mobilecheckboxgroup_27" id="nuevo_destino_mobilecheckboxgroup_27"
+                dsid="mobilecheckboxgroup_27">
+                    <fieldset data-role="controlgroup">
+                        <span dsid="mobilecheckbox_28" class="nuevo_destino_mobilecheckbox_28" name="mobilecheckbox_28">
+                            <input type="checkbox" name="mobilecheckboxgroup_27" id="nuevo_destino_mobilecheckbox_28"
+                            tabIndex="11" data-theme="e" value="add" />
+                            <label id="nuevo_destino_mobilecheckbox_28_label" for="nuevo_destino_mobilecheckbox_28">
+                                Agregar a mis destinos
+                            </label>
+                        </span>
+                    </fieldset>
+                </div>
+                <!-- mobilebutton_25 -->
+                <a data-role="button" name="mobilebutton_25" dsid="mobilebutton_25" class='  nuevo_destino_mobilebutton_25'
+                id="nuevo_destino_mobilebutton_25" data-corners="true" data-mini="false" data-theme="b"
+                tabIndex="10">
+                Activar
+                </a>
+                <h4 id="x">
+            x
+        	</h4>
+			<h4 id="y">
+            y
+        	</h4>
+            <h5 id="coordenadas"> </h5>
+        	<h2 id="llegaste"></h2>
+        	
+            </div>
+            <!-- mobilefooter1 -->
+            <div data-role="footer" data-position="fixed" class=" nuevo_destino_mobilefooter1"
+            name="mobilefooter1" dsid="mobilefooter1" id="nuevo_destino_mobilefooter1" data-theme="a">
+            </div>
+        </div>
+        
+    </body>
+
+</html>
